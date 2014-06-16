@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>QFD App</title>
+  <link rel="stylesheet" href="criterias.css"/>
+</head>
+
+<body>
+	
+    <header>
+      <h1>QFD Selection App</h1>
+    </header>
+
+  <div id="criteriaapp">
+
+	<div id="create-criteria">
+		<h2>Selection Criteria</h2>
+    	<input id="new-criteria" type="text" placeholder="What are your selection criteria?">
+  		<input id="new-value" type="text" placeholder="What is the importance (1-10)?">
+	</div>
+
+    <section id="main">
+      <ul id="criteria-list"></ul>
+    </section>
+	
+	<div id="create-option">
+		<h2>Options</h2>
+    	<input id="new-option" type="text" placeholder="What are your options?">
+	</div>
+
+    <section id="main-options">
+      <ul id="option-list"></ul>
+    </section>
+	
+	<div>
+		<h2>Scores</h2>
+		Input scores (1-10) for each criteria/option combination.
+	</div>
+	
+    <section id="main-scores">
+      <ul id="score-list"></ul>
+    </section>
+	
+	<div class="button1" id="myButtons">
+	  <button id="compute">Compute Total Scores</button>
+	</div>
+
+    <footer>
+    </footer>
+
+  </div>
+
+  <div id="instructions">
+    Double-click to edit an item. Press enter to save the item.
+  </div>
+
+  <div id="credits">
+	Created by Lisa White. <br />
+    Modified App created by
+    <br />
+    <a href="http://jgn.me/">J&eacute;r&ocirc;me Gravel-Niquet</a>.
+    <br />& Rewritten by: <a href="http://addyosmani.github.com/todomvc">TodoMVC</a>.
+  </div>
+
+  <script src="json2.js"></script>
+  <script src="jquery.js"></script>
+  <script src="underscore.js"></script>
+  <script src="backbone-min.js"></script>
+  <script src="backbone.localStorage.js"></script>
+  <script src="decisions.js"></script>
+
+  <!-- Templates -->
+
+  <script type="text/template" id="criteria-template">
+    <div class="view">
+      <label><%- title %>: </label>
+	  <label><%- value %></label>
+      <a class="destroy"></a>
+    </div>
+    <input class="edit" type="text" value="<%- title %>" />
+	<input class="editval" type="text" value="<%- value %>" />
+  </script>
+
+  <script type="text/template" id="option-template">
+    <div class="view">
+      <label><%- title %></label>
+      <a class="destroy"></a>
+    </div>
+    <input class="edit_choice" type="text" value="<%- title %>" />
+  </script>
+  
+  <script type="text/template" id="score-template">
+    <div class="view">
+      <label><%- choice %>, </label>
+	  <label><%- criteria %>: </label>
+	  <label><%- score %></label>
+    </div>
+    <input class="edit_score" type="text" value="<%- score %>" />
+  </script>
+
+  </body>
+</html>

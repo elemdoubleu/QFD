@@ -1,0 +1,19 @@
+The purpose of QFD application is used for decision making.
+
+Selection Criteria:
+The user inputs a set of criteria they want to use in their decision making process, as well as the importance/weight (1-10) of that particular criteria.
+
+Options:
+The user inputs the options they are considering in their decision making.
+
+Scores:
+The user inputs a score (1-10) for the selction criteria as it relates to each option
+
+Output: 
+A score is generated for each option.  These results are currently displayed in the console, but will be displayed to the screen.
+
+This is still a work in progress.  Still to be developed
+- Output results to the screen
+- Removing associated scores when a criteria or option is deleted
+- Input validation
+- Implementing coding structure best practices
